@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1009286935170",
+    "project_id": "vpn-project-2022",
+    "storage_bucket": "vpn-project-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009286935170:android:ecda7ad23503aaab2a3a9b",
+        "android_client_info": {
+          "package_name": "com.hundredstartups.openvpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009286935170-etqoieivkil3205mt0kieo7h5dh9b2f9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hundredstartups.openvpn",
+            "certificate_hash": "3d5cf235499fbb11daa4b9b27f92d6456f2a5a2c"
+          }
+        },
+        {
+          "client_id": "1009286935170-6a6lsjcajnv0qjk3ue8a32l99592h56c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoq1RmY9J9CammLtAq_HQnjdBocNCpbAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009286935170-6a6lsjcajnv0qjk3ue8a32l99592h56c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
