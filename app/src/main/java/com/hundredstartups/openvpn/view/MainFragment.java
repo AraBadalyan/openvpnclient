@@ -2,7 +2,6 @@ package com.hundredstartups.openvpn.view;
 
 import static android.app.Activity.RESULT_OK;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -45,9 +44,6 @@ import com.hundredstartups.openvpn.model.VpnData;
 import com.hundredstartups.openvpn.model.VpnEntity;
 import com.hundredstartups.openvpn.utils.CountryFlags;
 import com.hundredstartups.openvpn.utils.FormatterUtils;
-
-import org.joda.time.Period;
-import org.joda.time.format.PeriodFormat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
