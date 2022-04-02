@@ -1,36 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingBottom="5dp">
+        android:background="@color/colorPrimary">
 
+        <ImageView
+            android:id="@+id/vpnImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_disconnected" />
+
+        <TextView
+            android:id="@+id/vpnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vpnImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="DISCONNECTED"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+<!--        button layout-->
+        <RelativeLayout
+            android:id="@+id/showAddLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@id/vpnTextView"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bg_rectangle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_video" />
+
+                <TextView
+                    android:id="@+id/btnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Extend "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+<!--        log textview-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/connectionStatus">
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/vpnImageView">
 
             <TextView
                 android:id="@+id/logTv"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:textColor="@color/colorWhite" />
+                tools:text="Status"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/countryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Country"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/untilTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="Ending in"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
+<!--        logout-->
+        <LinearLayout
+            android:id="@+id/layout_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/outline_logout_black_36" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!--        status layout-->
         <LinearLayout
             android:id="@+id/connectionStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,6 +154,19 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="IP"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+
+
+
 
             <TextView
                 android:id="@+id/durationTv"
@@ -77,30 +204,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/vpnBtn"
-                android:layout_width="150dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/button"
-                android:tag="1"
-                android:text="Connect"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp" />
-
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/selectedServerIcon"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:visibility="invisible"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/usa_flag" />
 
     </RelativeLayout>
 
